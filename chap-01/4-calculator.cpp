@@ -4,7 +4,6 @@
 
 void display_result(int result) {
     using namespace std;
-    // Output result.
     cout << "Result is " << result << endl;
 }
 
