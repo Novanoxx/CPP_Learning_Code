@@ -3,6 +3,7 @@ set(executables
     2-parrot
     3-array
     4-calculator
+    test_qcm
 )
 
 foreach(executable ${executables})
