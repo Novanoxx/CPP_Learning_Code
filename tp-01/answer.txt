@@ -1,0 +1,47 @@
+Exercice 1:
+1. Avantages et désavantage:
+Compilé:
+-   : faut recompiler pour chaque plateforme
+-   : faut recompiler si les dépendances changent
++   : plus efficace (traduit en language machine)
++/- : gestion de mémoire plus "présente"
+
+2.
+Erreur de compilation: Lors de la compilation, une erreur de syntaxe peut être la cause
+de cette erreur. Pour les identifier, on peut utiliser assert(False).
+
+Erreur d'éxécution: Lors de l'éxécution d'un programme compilé, une erreur de mémoire
+ou une action non valide pour le programme provoque cette erreur. C'est une erreur difficile
+à debugger.
+Pour les identifier, on peut utiliser static_assert(False).
+
+3.
+"Undefined behavior" est dù a une syntaxe non reconnu par la machine.
+exemple: int x = 0; est valide mais short x = 0x10000; est invalide car le numéro
+est trop grand pour short. Les 2 renverront 0 mais celui avec short est un 0 d'erreur.
+Ce problème peut arriver dans d'autre circonstance trop complexe pour moi.
+
+Exercice 2:
+1.
+- const short s1; provoque une erreur car elle doit être initialisé.
+- bool b3{i1}; qui provoque une erreur a la compilation
+car on converti u int en bool.
+- char c8{"a"}; ne compile pas car la machine ne sait pas convertir
+une chaîne de caractère en un seul caractère.
+- double& d12; ne compile pas car la référence pointe nul-part.
+- int& i15 = i1; ne compile pas car la référence pointe vers une const qui ne peut
+pas être modifier dù au type const. On créer une référencechangeable vers
+une référence non changeable.
+- int& i16 = b2; pareil que int& i15 = i1;
+
+2.
+s0 n'est pas initialisé.
+ul7 indéfinit car us6 est indéfinit.
+
+
+Exercice 3:
+2.
+passage par valeur : pas d'intention de changement, accepte const de copie
+passage par référence : intention de changement
+passage par const ref : pas d'intention de changement, éviter de copier
+
