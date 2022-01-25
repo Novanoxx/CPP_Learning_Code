@@ -1,5 +1,6 @@
 #pragma once
 
-// Pokemon are automatically stored there if the trainer doesn't have enough space on them.
+// A PC is the place where Pokemons get automagically sent when the trainer's pockets are full.
+// When a Pokemon is transferred to the PC, this one takes ownership.
 class PC
 {};

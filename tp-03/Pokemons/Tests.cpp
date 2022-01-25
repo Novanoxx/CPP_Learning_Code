@@ -57,7 +57,7 @@
 //     REQUIRE(pokemons[0]->name() == "Pikachu");
 // }
 
-// TEST_CASE("Trainers are constructed with their name and a PC")
+// TEST_CASE("Trainers are constructed with their name and they know the PC where their Pokemons get sent")
 // {
 //     PC      pc;
 //     Trainer sacha { "Sacha", pc };
