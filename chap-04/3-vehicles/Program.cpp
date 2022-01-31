@@ -4,9 +4,9 @@
 
 #include <iostream>
 
-int main()
-{
-    Driver     car_driver;
+int main() {
+    Driver car_driver;
+    // Vehicle    test(car_driver);
     Car        car { car_driver, 60u };
     const auto distance_in_car = car.drive();
     std::cout << distance_in_car << " km in a car." << std::endl;

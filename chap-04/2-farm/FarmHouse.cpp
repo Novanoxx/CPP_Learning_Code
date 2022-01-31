@@ -3,27 +3,45 @@
 #include "Chicken.h"
 #include "Cow.h"
 #include "Dog.h"
+#include "Opera.h"
 
-void sing_a_lot(const Animal& animal, unsigned int times)
-{
-    while (times-- > 0)
-    {
-        animal.sing();
+#include <vector>
+
+void sing_a_lot(const Animal& animal, unsigned int times) {
+    if (times > 0) {
+        while (--times > 0) {
+            animal.sing(' ');
+        }
+        animal.sing('\n');
     }
 }
 
-int main()
-{
+void sing_chorus(const std::vector<Animal*>& grp) {
+    for (const auto* animal : grp) {
+        animal->sing(' ');
+    }
+    std::cout << std::endl;
+}
+
+int main() {
     Cat     cat;
     Chicken chicken;
     Dog     dog;
     Cow     cow;
+    // std::vector<Animal*> grp;
+    // grp.emplace_back(&cat);
+    // grp.emplace_back(&dog);
 
     sing_a_lot(cat, 2u);
     sing_a_lot(dog, 1u);
     sing_a_lot(cow, 3u);
     sing_a_lot(dog, 1u);
     sing_a_lot(chicken, 2u);
+
+    // sing_chorus(grp);
+
+    Opera opera;
+    opera.sing();
 
     return 0;
 }
