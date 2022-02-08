@@ -14,7 +14,7 @@ public:
         : _name { name }
         , _pc { pc } {}
 
-    std::string              name() { return _name; }
+    const std::string&       name() { return _name; }
     std::array<Pokeball, 6>& pokeballs() { return _balls; }
     void                     capture(std::unique_ptr<Pokemon> pkm) {
         int flag = 0;
